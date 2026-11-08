@@ -1,0 +1,43 @@
+# agent-traces — isolated development container. Own network (internal: no Internet), no published ports,
+# no shared volumes/secrets, no docker.sock, non-root, read-only root filesystem, bounded resources.
+# Only this project directory is mounted (/workspace). Internet is used only at build time (pip install).
+name: agent-traces
+
+services:
+  agent-traces-dev:
+    build:
+      context: .
+      args:
+        UID: "1000"
+        GID: "1000"
+    image: agent-traces-dev:local
+    container_name: agent-traces-dev
+    init: true
+    user: "1000:1000"
+    working_dir: /workspace
+    volumes:
+      - type: bind
+        source: .
+        target: /workspace
+    networks: [agent-traces-internal]
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    environment:
+      HOME: /tmp
+      XDG_CACHE_HOME: /tmp/.cache
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 1g
+    memswap_limit: 1g
+    cpus: 1.5
+    pids_limit: 256
+    restart: "no"
+    logging:
+      driver: json-file
+      options: { max-size: "5m", max-file: "2" }
+
+networks:
+  agent-traces-internal:
+    name: agent-traces-internal
+    internal: true

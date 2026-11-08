@@ -1,0 +1,3 @@
+# Synthetic fixtures contain deliberate whitespace and end-of-line quirks (blank or whitespace-only lines,
+# a missing final newline). Keep their bytes exact and exclude them from whitespace checks.
+tests/fixtures/** -whitespace -text

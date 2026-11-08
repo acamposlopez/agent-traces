@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-traces"
+version = "0.1.0"
+description = "Local, offline CLI that inspects the structure of AI agent traces (Claude Code, Cursor CLI) without showing their content."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0"]
+
+[project.scripts]
+agent-traces = "agent_traces.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+# Large synthetic files from the memory tests are deleted unless the test fails (keeps /tmp small).
+tmp_path_retention_policy = "failed"

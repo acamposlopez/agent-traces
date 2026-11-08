@@ -1,0 +1,56 @@
+# Real agent traces and any sensitive input/output — never commit them.
+# Only synthetic, hand-made fixtures under tests/fixtures/ and the synthetic case-study examples under
+# examples/ may be committed.
+traces/
+data/
+samples/
+output/
+redacted/
+*.jsonl
+*.trace
+*.trace.json
+*.har
+*.sqlite
+*.db
+.claude/projects/
+.cursor/
+!tests/fixtures/**
+!examples/*.jsonl
+
+# Credentials and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+secrets/
+credentials*.json
+*service-account*.json
+
+# Python / tooling (regenerable)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Temporary files and editors
+tmp/
+*.tmp
+*.log
+*.swp
+.DS_Store
+.vscode/
+.idea/

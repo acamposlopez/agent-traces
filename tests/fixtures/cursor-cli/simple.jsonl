@@ -1,0 +1,4 @@
+{"type":"system","subtype":"init","apiKeySource":"login","cwd":"/home/canary-dev/projects/demo-app","session_id":"c0a10000-5e55-4000-8000-000000000001","model":"Claude 4 Sonnet","permissionMode":"default"}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"CANARY prompt: explain what a Python list comprehension is, in two sentences."}]},"session_id":"c0a10000-5e55-4000-8000-000000000001"}
+{"type":"assistant","message":{"role":"assistant","content":[{"type":"text","text":"CANARY answer: a list comprehension builds a new list from an iterable in a single expression."}]},"session_id":"c0a10000-5e55-4000-8000-000000000001"}
+{"type":"result","subtype":"success","duration_ms":1500,"duration_api_ms":1500,"is_error":false,"result":"CANARY answer: a list comprehension builds a new list from an iterable in a single expression.","request_id":"c0ffee00-0000-4000-8000-canary000001","session_id":"c0a10000-5e55-4000-8000-000000000001"}

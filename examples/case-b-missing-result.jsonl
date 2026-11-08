@@ -1,0 +1,6 @@
+{"type": "system", "subtype": "init", "apiKeySource": "login", "cwd": "/home/dev/example-app", "session_id": "bbbb0000-0000-4000-8000-00000000000b", "model": "Claude 4 Sonnet", "permissionMode": "default"}
+{"type": "user", "message": {"role": "user", "content": [{"type": "text", "text": "Run the database migration for the staging environment."}]}, "session_id": "bbbb0000-0000-4000-8000-00000000000b"}
+{"type": "assistant", "message": {"role": "assistant", "content": [{"type": "text", "text": "Running the migration now."}]}, "session_id": "bbbb0000-0000-4000-8000-00000000000b"}
+{"type": "tool_call", "subtype": "started", "call_id": "call_example_b_01", "tool_call": {"function": {"name": "run_terminal_command", "arguments": "{\"command\": \"./migrate.sh staging\"}"}}, "session_id": "bbbb0000-0000-4000-8000-00000000000b"}
+{"type": "assistant", "message": {"role": "assistant", "content": [{"type": "text", "text": "The migration finished without errors."}]}, "session_id": "bbbb0000-0000-4000-8000-00000000000b"}
+{"type": "result", "subtype": "success", "duration_ms": 3000, "duration_api_ms": 2500, "is_error": false, "result": "The migration finished without errors.", "request_id": "req-example-b-0001", "session_id": "bbbb0000-0000-4000-8000-00000000000b"}

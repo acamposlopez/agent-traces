@@ -1,0 +1,8 @@
+# Source distribution contents beyond the packages themselves. Without this file setuptools ships the
+# test modules but neither tests/conftest.py nor the synthetic fixtures they need, so the tests in the sdist
+# could not run. Everything under tests/ is synthetic and already public with the code.
+graft tests
+graft examples
+include CASE_STUDY.md
+global-exclude *.py[cod]
+global-exclude __pycache__

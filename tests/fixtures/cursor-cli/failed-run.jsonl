@@ -1,0 +1,7 @@
+{"type":"system","subtype":"init","apiKeySource":"login","cwd":"/home/canary-dev/projects/demo-app","session_id":"c0a30000-5e55-4000-8000-000000000003","model":"Claude 4 Sonnet","permissionMode":"default"}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"CANARY: run the deploy script for the canary-prod environment."}]},"session_id":"c0a30000-5e55-4000-8000-000000000003"}
+{"type":"assistant","message":{"role":"assistant","content":[{"type":"text","text":"Running the deploy script."}]},"session_id":"c0a30000-5e55-4000-8000-000000000003"}
+{"type":"tool_call","subtype":"started","call_id":"call_canary_c0a3_01","tool_call":{"function":{"name":"run_terminal_command","arguments":"{\"command\": \"./deploy.sh --env canary-prod\"}"}},"session_id":"c0a30000-5e55-4000-8000-000000000003"}
+{"type":"tool_call","subtype":"completed","call_id":"call_canary_c0a3_01","tool_call":{"function":{"name":"run_terminal_command","arguments":"{\"command\": \"./deploy.sh --env canary-prod\"}","result":{"error":{"message":"CANARY permission denied: /home/canary-dev/.ssh/id_canary"}}}},"session_id":"c0a30000-5e55-4000-8000-000000000003"}
+{"type":"assistant","message":{"role":"assistant","content":[{"type":"text","text":"The script failed; let me read it."}]},"session_id":"c0a30000-5e55-4000-8000-000000000003"}
+{"type":"tool_call","subtype":"started","call_id":"call_canary_c0a3_02","tool_call":{"readToolCall":{"args":{"path":"deploy.sh"}}},"session_id":"c0a30000-5e55-4000-8000-000000000003"}

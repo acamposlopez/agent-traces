@@ -1,0 +1,7 @@
+# Build context: only what the image needs (pyproject + src). Never send traces or secrets to the builder.
+*
+!pyproject.toml
+!README.md
+!LICENSE
+!src/
+**/__pycache__

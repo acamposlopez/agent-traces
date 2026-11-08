@@ -1,0 +1,3 @@
+{"event":"start","ts":1,"note":"CANARY unknown format"}
+{"event":"message","ts":2,"text":"CANARY"}
+{"event":"end","ts":3}

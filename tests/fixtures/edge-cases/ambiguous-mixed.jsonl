@@ -1,0 +1,2 @@
+{"parentUuid":null,"isSidechain":false,"userType":"external","cwd":"/home/canary-dev/projects/demo-app","sessionId":"e4000000-5e55-4000-8000-000000000004","version":"2.1.150","gitBranch":"main","type":"user","message":{"role":"user","content":"CANARY: mixed"},"uuid":"e4000000-0000-4000-8000-000000000001","timestamp":"2026-03-14T10:00:02.000Z"}
+{"type":"tool_call","subtype":"started","call_id":"call_canary_mixed","tool_call":{"readToolCall":{"args":{"path":"CANARY.md"}}},"session_id":"e4000000-5e55-4000-8000-000000000005"}

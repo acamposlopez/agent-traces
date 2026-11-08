@@ -1,0 +1,9 @@
+{"type":"system","subtype":"init","apiKeySource":"login","cwd":"/home/canary-dev/projects/demo-app","session_id":"e3000000-5e55-4000-8000-000000000003","model":"Claude 4 Sonnet","permissionMode":"default"}
+{"type":"user","session_id":"e3000000-5e55-4000-8000-000000000003"}
+{"type":"assistant","message":"CANARY message that is not an object","session_id":"e3000000-5e55-4000-8000-000000000003"}
+{"type":"user","message":{"role":"user","content":[{"type":"image","data":"CANARY"}]},"session_id":"e3000000-5e55-4000-8000-000000000003"}
+{"type":"tool_call","subtype":"started","tool_call":{"readToolCall":{"args":{"path":"CANARY.txt"}}},"session_id":"e3000000-5e55-4000-8000-000000000003"}
+{"type":"tool_call","subtype":"completed","call_id":"call_canary_never_started","tool_call":{"readToolCall":{"args":{"path":"CANARY.txt"},"result":{"success":{"content":"CANARY"}}}},"session_id":"e3000000-5e55-4000-8000-000000000003"}
+{"type":"tool_call","subtype":"started","call_id":"call_canary_bad","tool_call":"CANARY not an object","session_id":"e3000000-5e55-4000-8000-000000000003"}
+{"type":"tool_call","subtype":"canary_subtype","call_id":"call_canary_odd","tool_call":{"readToolCall":{"args":{}}},"session_id":"e3000000-5e55-4000-8000-000000000003"}
+{"type":"system","subtype":"canary_status","session_id":"e3000000-5e55-4000-8000-000000000003"}
